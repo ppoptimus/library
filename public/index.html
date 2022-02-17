@@ -1,19 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    
-    <title>React App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="dist/img/logo.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
+		<meta name="description" content="Web site created using create-react-app" />
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css" />
+		<!-- Tempusdominus Bootstrap 4 -->
+		<link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css" />
+		<!-- iCheck -->
+		<link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css" />
+		<!-- JQVMap -->
+		<link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css" />
+		<!-- Theme style -->
+		<link rel="stylesheet" href="dist/css/adminlte.min.css" />
+		<!-- overlayScrollbars -->
+		<link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css" />
+		<!-- Daterange picker -->
+		<link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css" />
+		<!-- summernote -->
+		<link rel="stylesheet" href="plugins/summernote/summernote-bs4.min.css" />
+
+		<title>ระบบงานห้องสมุด</title>
+	</head>
+	<body>
+		<div id="root"></div>
+
+		<!-- jQuery -->
+		<script src="plugins/jquery/jquery.min.js"></script>
+		<!-- jQuery UI 1.11.4 -->
+		<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+		<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+		<script>
+			$.widget.bridge("uibutton", $.ui.button)
+		</script>
+		<!-- Bootstrap 4 -->
+		<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<!-- ChartJS -->
+		<!-- <script src="plugins/chart.js/Chart.min.js"></script> -->
+		<!-- jQuery Knob Chart -->
+		<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+		<!-- daterangepicker -->
+		<script src="plugins/moment/moment.min.js"></script>
+		<script src="plugins/daterangepicker/daterangepicker.js"></script>
+		<!-- Tempusdominus Bootstrap 4 -->
+		<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+		<!-- Summernote -->
+		<script src="plugins/summernote/summernote-bs4.min.js"></script>
+		<!-- overlayScrollbars -->
+		<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+		<!-- AdminLTE App -->
+		<script src="dist/js/adminlte.js"></script>
+
+		<script>
+			$(document).ready(function () {
+				var trigger = $(".hamburger"),
+					overlay = $(".overlay"),
+					isClosed = false
+
+				trigger.click(function () {
+					hamburger_cross()
+				})
+
+				function hamburger_cross() {
+					if (isClosed == true) {
+						overlay.hide()
+						trigger.removeClass("is-open")
+						trigger.addClass("is-closed")
+						isClosed = false
+					} else {
+						overlay.show()
+						trigger.removeClass("is-closed")
+						trigger.addClass("is-open")
+						isClosed = true
+					}
+				}
+
+				$('[data-toggle="offcanvas"]').click(function () {
+					$("#wrapper").toggleClass("toggled")
+				})
+			})
+		</script>
+	</body>
 </html>

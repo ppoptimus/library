@@ -1,5 +1,4 @@
-import { useState } from "react"
-import { Link, NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 export default function SideBar() {
 	return (
@@ -21,10 +20,10 @@ export default function SideBar() {
 								</Link>
 							</li>
 							<li className='nav-item my-1'>
-								<a href='#' className='nav-link'>
+								<Link to='#' className='nav-link'>
 									<i className='nav-icon fas fa-file-alt text-lg' />
 									<p>จัดการเนื้อหา</p>
-								</a>
+								</Link>
 							</li>
 							<li className='nav-item my-1'>
 								<Link to='#' className='nav-link'>

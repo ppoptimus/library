@@ -1,8 +1,8 @@
 
 @font-face {
-  font-family: 'Srisakdi';
-  src: local('Srisakdi'), url(./font/Srisakdi-Bold.ttf) format('truetype');
+  font-family: 'Mitr';
+  src: local('Mitr'), url(./font/Mitr-Regular.ttf) format('truetype');
 }
 body {
-  font-family: 'Srisakdi'!important;
+  font-family: 'Mitr'!important;
 }
